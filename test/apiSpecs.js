@@ -3,7 +3,8 @@ import chaiHttp from 'chai-http'
 import { dropDb } from './helpers'
 import app from '../src/server'
 import { signToken } from '../src/api/modules/auth'
-import { User } from '../src/api/resources/user/user.model'
+
+import { Staff } from '../src/api/resources/staff/staff.model'
 
 chai.use(chaiHttp)
 
