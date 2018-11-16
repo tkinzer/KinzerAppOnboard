@@ -1,1 +1,1 @@
-export * from './zoo.restRouter'
+export * from './animal.restRouter'

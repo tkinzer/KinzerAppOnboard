@@ -43,15 +43,31 @@ In the end, the appraoch just mentioned might have also taken to long with less 
 
 
 
-##Project Description
+### Project Description
 
+A zoo requires a lot of overhead and management. In order to run a successful zoo, the following major items need to be considered:
 
+* Animal Caregiving and Overhead
+* Staffing and Operating the Zoo
+* Back-office Business Needs
 
+Additionally, most zoo's that are successful will also provide:
 
+* Family friendly activities
+* Concessions (requires inventory management)
+* Marketing and Customer Success
 
+In order to provide all these services, the Zoo will need a platform that allows Staff and/or Admin to login and manage the zoo through an interactive website.
 
+The staff will manage both the animals and the staff up until the point where the Zoo is able to assign specific staff to take care of specific duties around the Zoo.
 
+Lastly, in order to remain open the Zoo must pass the following legal requirements:
 
+* Minimum On-duty Staff:            5 Employees
+* Maximum Amount of Animals:        20 Animals of same or different species
+* Remain under a given budget:      $ X
+* Earn a Profit of over:            $ Y
+* Maximum Hours Per Staff:          60 hours
 
 ### INSTRUCTIONS
 
@@ -105,6 +121,7 @@ npm start
 API Endpoints + Payloads
 
 /api
+
     /staff
         GET     /       List of Staff Members
         POST    /       Create Single Staff Member
@@ -132,3 +149,7 @@ API Endpoints + Payloads
         GET     /:id
         POST    /:id
         DELETE  /:id
+
+Link to Postman Collection:
+
+https://www.getpostman.com/collections/40e83c84fad4a76063a8
