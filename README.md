@@ -9,7 +9,7 @@ The Zoo Management System is a tool for operating the logistics of a basic Zoo. 
 * React
 * Git
 
-##Project Overview
+###Project Overview
 
 In order to create the management system for the zoo, I decided to use a REST API connected to a MongoDB for storing and retrieving details.
 
@@ -21,11 +21,11 @@ disclaimer:
 
 When the allotted time ran out, I was having a few issues with the debugging conflicts between my API and the React App. While the project will run, it does not function as intended and is incomplete.
 
-Current State:
+Current State of the Platform:
 - API: 
 the endpoints and models using mongoose have been created for Staff, the Zoo, and Animals. There is a bug with adding multiple items to the collection when the body of the request is not formatted correctly.
 
-- React 'Client' App: 
+- React 'Client' UI: 
 The react UI has only been minimally built out from the Create-React-App towards the Portal to perform CRUD operations on Staff and Animals, as well as modify/add details about the Zoo.
 
 The next steps, if time was available, would be:
@@ -65,7 +65,7 @@ checkout one of the following branches:
 master:         a
 api-client:     a
 graphql:        a
-simple:         a
+simple-ui:         a
 
 2 - Navigate to the React project folder first at:
 
@@ -98,3 +98,37 @@ npm start
 
 
 ** Didnt have time to add docker container
+
+
+### APPENDIX
+
+API Endpoints + Payloads
+
+/api
+    /staff
+        GET     /       List of Staff Members
+        POST    /       Create Single Staff Member
+        GET     /:id    Get Single Staff Member
+        POST    /:id
+        DELETE  /:id
+
+    /animal
+        GET     /
+        POST    /
+        GET     /:id
+        POST    /:id
+        DELETE  /:id
+
+    /zoo
+        GET     /
+        POST    /
+        GET     /:id
+        POST    /:id
+        DELETE  /:id
+
+    /user
+        GET     /
+        POST    /
+        GET     /:id
+        POST    /:id
+        DELETE  /:id
