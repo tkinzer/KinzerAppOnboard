@@ -4,8 +4,7 @@ const zooSchema = new mongoose.Schema({
 
     name: {
         type: String,
-        unique: true,
-        required: true
+        default: 'Tim Zoo'
     },
     details: {
         type: Object,

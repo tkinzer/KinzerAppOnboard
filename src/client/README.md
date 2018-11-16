@@ -1,3 +1,29 @@
+
+NOTES on zoo management react UI
+
+
+
+
+
+
+Due to running out of time on the 4 hour deadline, I was unable to create a custom UI for the Staff and Animal CMS, as well as an overall portal for the above plus Zoo details.
+
+
+I started with the API and DB, and then moved onto the React UI after getting the initial API setup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

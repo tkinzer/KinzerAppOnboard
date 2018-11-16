@@ -1,4 +1,4 @@
 import createApiSpec from '~/apiSpecs'
 import { Animal } from './animal.model'
 
-createApiSpec(Animal, 'animal', { name: 'Jordan' })
+createApiSpec(Animal, 'animal', {name: 'doggy'})

@@ -3,9 +3,7 @@ import mongoose from 'mongoose'
 const animalSchema = new mongoose.Schema({
 
     name: {
-        type: String,
-        unique: true,
-        required: true
+        type: String
     },
     details: {
         type: Object,
@@ -14,9 +12,5 @@ const animalSchema = new mongoose.Schema({
     }
 
 }, {timestamps: true})
-
-animalSchema.methods = {
-    
-}
 
 export const Animal = mongoose.model('animal', animalSchema)
