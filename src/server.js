@@ -2,7 +2,7 @@ import express from 'express'
 import setupMiddware from './middleware'
 import { restRouter } from './api'
 import { connect } from './db'
-import { signin, protect } from './api/modules/auth'
+import { signin } from './api/modules/auth'
 
 const app = express();
 

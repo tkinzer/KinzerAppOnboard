@@ -1,54 +1,52 @@
-const nodeExternals = require('webpack-node-externals')
+const webpack = require('webpack')
 const path = require('path')
-process.env.NODE_ENV = 'testing'
+const nodeExternals = require('webpack-node-externals')
+const StartServerPlugin = require('start-server-webpack-plugin')
 
 module.exports = {
+  entry: ['webpack/hot/poll?1000', './src/index'],
+  watch: true,
+  devtool: 'sourcemap',
   target: 'node',
-  output: {
-    devtoolModuleFilenameTemplate: '[absolute-resource-path]',
-    devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
+  node: {
+    __filename: true,
+    __dirname: true
   },
-  resolve: {
-    alias: {
-      '~/testhelpers': path.resolve(__dirname, 'test/helpers'),
-      '~testhelpers': path.resolve(__dirname, 'test/helpers'),
-      '~apiSpecs': path.resolve(__dirname, 'test/apiSpecs'),
-      '~/apiSpecs': path.resolve(__dirname, 'test/apiSpecs'),
-      '~/config': path.resolve(__dirname, 'src/config/index')
-    }
-  },
-  devtool: 'cheap-module-source-map',
-  externals: [nodeExternals()],
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              presets: [['env', { modules: false }], 'stage-0'],
-              plugins: ['transform-regenerator', 'transform-runtime']
+  externals: [nodeExternals({ whitelist: ['webpack/hot/poll?1000'] })],
+    module: {
+      rules: [
+        {
+          test: /\.js?$/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                babelrc: false,
+                presets: [['env', { modules: false }], 'stage-0'],
+                plugins: ['transform-regenerator', 'transform-runtime']
+              }
             }
+          ],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.(graphql|gql)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'raw-loader'
           }
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(graphql|gql)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'raw-loader'
         }
-      },
-      {
-        test: /\.html$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'raw-loader'
-        }
-      }
-    ]
-  }
-}
+      ]
+    },
+    plugins: [
+      new StartServerPlugin('server.js'),
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env': { BUILD_TARGET: JSON.stringify('server') }
+      }),
+      new webpack.BannerPlugin({ banner: 'require("source-map-support").install();', raw: true, entryOnly: false })
+    ],
+    output: { path: path.join(__dirname, 'dist'), filename: 'server.js' }
+};

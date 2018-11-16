@@ -1,4 +1,3 @@
-import '../src/api/resources/user/user.model'
 import '../src/api/resources/staff/staff.model'
 import '../src/api/resources/animal/animal.model'
 import '../src/api/resources/zoo/zoo.model'
