@@ -2,7 +2,6 @@ import { expect } from 'chai'
 import { dropDb } from '~/testhelpers'
 import { controllers } from './query'
 import { User } from '../resources/user/user.model'
-import { Staff } from '../resources/staff/staff.model'
 
 describe('Modules', () => {
   beforeEach(async () => {
