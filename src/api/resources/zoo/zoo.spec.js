@@ -2,7 +2,7 @@ import createApiSpec from '~/apiSpecs'
 import { Zoo } from './zoo.model'
 
 createApiSpec(Zoo, 'zoo', {
-    zooName: 'Moron Mountian', 
+    name: 'Moron Mountian', 
     zooFinances: {
         total_capital: 30000000000000000,
         budgets: [
