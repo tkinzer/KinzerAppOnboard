@@ -1,7 +1,7 @@
 import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
 import { dropDb } from './helpers'
-import app from '../src/server'
+import app from '../server'
 import { signToken } from '../src/api/modules/auth'
 import { User } from '../src/api/resources/user/user.model'
 

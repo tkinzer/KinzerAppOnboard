@@ -1,3 +1,7 @@
+import '../src/api/resources/staff/staff.model'
+import '../src/api/resources/animal/animal.model'
+import '../src/api/resources/zoo/zoo.model'
+
 import mongoose from 'mongoose'
 
 mongoose.Promise = global.Promise
@@ -19,7 +23,7 @@ export const removeModel = (modelName) => {
 }
 
 export const dropDb = () => {
-    const TEST_DB_NAME = '';
+    const TEST_DB_NAME = 'kinzer_zoo';
   return mongoose.connect('mongodb://localhost/' + TEST_DB_NAME, {
     useMongoClient: true
   })

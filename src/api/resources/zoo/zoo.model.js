@@ -2,10 +2,14 @@ import mongoose from 'mongoose'
 
 const zooSchema = new mongoose.Schema({
 
-    zooName: {
+    name: {
         type: String,
-        unique: true,
-        required: true
+        default: 'Tim Zoo'
+    },
+    details: {
+        type: Object,
+        unique: false,
+        required: false
     }
 
 }, {timestamps: true})
