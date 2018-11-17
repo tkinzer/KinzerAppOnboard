@@ -3,7 +3,7 @@ import http from 'http'
 import { createServer } from 'http'
 
 import app from './server'
-// import schema from './schema'
+// import schema from './schema' - why after app?
 
 const server = http.createServer(app)
 let currentApp = app
