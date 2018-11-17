@@ -1,0 +1,1 @@
+echo "Tim likes Silke so much that he loves her!"
