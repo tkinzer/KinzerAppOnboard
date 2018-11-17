@@ -18,7 +18,7 @@ const routes = [
   {
     path: "/",
     exact: true,
-    sidebar: () => <div>home!</div>,
+    sidebar: () => <div></div>,
     main: () => <h2>Home</h2>
   },
   {
@@ -34,7 +34,7 @@ const routes = [
   {
     path: "/zoo",
     sidebar: () => <div></div>,
-    main: () => <h2>3</h2>
+    main: () => <h2>Zoo </h2>
   },
   {
     path: "/admin",
@@ -65,13 +65,6 @@ const App = () => (
       </div>
       <div style={{ flex: 1, padding: "10px" }}>
           {routes.map((route, index) => (
-            // You can render a <Route> in as many places
-            // as you want in your app. It will render along
-            // with any other <Route>s that also match the URL.
-            // So, a sidebar or breadcrumbs or anything else
-            // that requires you to render multiple things
-            // in multiple places at the same URL is nothing
-            // more than multiple <Route>s.
             <Route
               key={index}
               path={route.path}
@@ -98,10 +91,7 @@ const Header = () => (
               <Link to="/animals">Animals</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/topics">Topics</Link>
+              <Link to="/admin">Admin</Link>
             </li>
           </ul>
 );
