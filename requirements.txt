@@ -1,0 +1,4 @@
+mongo
+node
+nginx
+mongo-express
