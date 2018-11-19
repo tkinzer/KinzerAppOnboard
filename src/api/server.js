@@ -1,8 +1,8 @@
 import express from 'express'
-import setupMiddware from './middleware'
-import { restRouter } from '.'
-import { connect } from './db'
-import { signin } from './modules/auth'
+import setupMiddware from './app/middleware'
+import { restRouter } from './app'
+import { connect } from './app/db'
+import { signin } from './app/modules/auth'
 
 const app = express();
 
