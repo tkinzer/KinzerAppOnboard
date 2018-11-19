@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 // import "./Animals.css"
 
 import map from 'lodash/map';
-
+import CreateAnimal from './Animal.create'
 import Animal from "./Animal"
 
 class Animals extends Component {
@@ -13,11 +13,12 @@ class Animals extends Component {
     }
     
     componentWillMount() {
-        console.log("Hello");
+        console.log("Animals Dashboard Loading...");
     }
 
     componentDidMount() {
-        console.log("I am your trusty friend, Boop");
+        console.log("Loading animals");
+        //fetch animals from api
     }
 
     viewAnimal(key) {
@@ -29,7 +30,10 @@ class Animals extends Component {
         const { animals } = this.props;
         return (
             <div>
-                <h1>Animals</h1>
+                <h1>Animals
+                    <CreateAnimal />
+                </h1>
+
                 {
                     map(animals, (animal,key) => {
                         return <Animal
