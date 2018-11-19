@@ -33,3 +33,7 @@ mkdir -p src/js/components/{container,presentational}
 touch src/js/components/container/FormContainer.js
 
 npm i prop-types --save-dev
+
+
+
+npm i html-webpack-plugin html-loader --save-dev
