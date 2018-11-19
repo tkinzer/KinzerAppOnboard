@@ -39,4 +39,7 @@ npm install --save-dev webpack-hot-middleware
 
 npm install --save-dev eslint-plugin-react eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-import
 
+### JEST Unit Testing and Coverage
+
+npm install --save-dev jest
 

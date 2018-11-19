@@ -1,9 +1,9 @@
 import express from 'express'
-//import { zooRouter } from './resources/zoo'
+//import { userRouter } from './asset/user'
 //import { apiErrorHandler } from './modules/errorHandler'
 
 export const restRouter = express.Router()
 
 //Model Routers
-// restRouter.use('/zoo', zooRouter)
+// restRouter.use('/user', userRouter)
 // restRouter.use(apiErrorHandler)
